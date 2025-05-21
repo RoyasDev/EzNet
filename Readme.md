@@ -2,7 +2,7 @@
 
 A robust networking solution for Godot 4 that handles object synchronization, ownership, and RPC management with minimal setup.
 
-Built off of the networking solution we built in our Youtube Multiplayer Series! [Godot Multiplayer Tutorial Series](https://www.youtube.com/watch?v=YpyS_EbmS7c&list=PLbz43GPOKlIGD6C70AfyXJSB7GrZmvwyC)
+Built off of the networking solution we built in our Youtube Multiplayer Series! ![Godot Multiplayer Tutorial Series](https://www.youtube.com/watch?v=YpyS_EbmS7c&list=PLbz43GPOKlIGD6C70AfyXJSB7GrZmvwyC)
 
 ## 🔧 Features
 
@@ -26,7 +26,7 @@ Built off of the networking solution we built in our Youtube Multiplayer Series!
   - Batch spawning
   - Extensible Networker base class
 
-[Walking Gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzh4a3BjY3NpNzltb3plNDJhd3Rxc2p6cTluZzM4bDMzbXk2MDJ5NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SOtnvxhl9AA2XUyHX4/giphy.gif)
+![Walking Gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzh4a3BjY3NpNzltb3plNDJhd3Rxc2p6cTluZzM4bDMzbXk2MDJ5NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SOtnvxhl9AA2XUyHX4/giphy.gif)
 
 ## 📦 Installation
 
