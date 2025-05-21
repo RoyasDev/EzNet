@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://xt35a7751047"]
+
+[ext_resource type="Script" uid="uid://df4nennhyxfux" path="res://addons/EzNet/example/scripts/example_character_network.gd" id="1_wa5yl"]
+[ext_resource type="Script" uid="uid://bjgylmqw2xlv5" path="res://addons/EzNet/example/scenes/levels/example_point_and_click.gd" id="2_4b2do"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qom8f"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_txj2y"]
+material = SubResource("StandardMaterial3D_qom8f")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2v0an"]
+
+[node name="Red" type="Node"]
+script = ExtResource("1_wa5yl")
+network_manager_name = "Node3D/ExampleNetworkManager"
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+floor_constant_speed = true
+script = ExtResource("2_4b2do")
+
+[node name="Label3D" type="Label3D" parent="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.3672, 0)
+text = "1000"
+font_size = 100
+
+[node name="Body" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_txj2y")
+skeleton = NodePath("../..")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_2v0an")

@@ -1,0 +1,218 @@
+[gd_scene load_steps=24 format=3 uid="uid://bqbtjjg04e8aj"]
+
+[ext_resource type="Script" uid="uid://bng6hhomt3vvm" path="res://addons/EzNet/example/scripts/example_network_manager.gd" id="1_lopfr"]
+[ext_resource type="Script" uid="uid://lodnbq0nwckl" path="res://addons/EzNet/example/scripts/example_connection_menu.gd" id="2_7vvwc"]
+[ext_resource type="Resource" uid="uid://cntvsjlt21e6f" path="res://addons/EzNet/resources/enet_networker.tres" id="2_sppne"]
+[ext_resource type="Script" uid="uid://bjjvinhxaxu41" path="res://addons/EzNet/example/scripts/example_color_select_menu.gd" id="3_pw7pi"]
+[ext_resource type="Texture2D" uid="uid://cxf2em2d6pyu8" path="res://addons/EzNet/example/textures/blue_normal.png" id="4_waq6e"]
+[ext_resource type="Texture2D" uid="uid://co8kq2csy4o0t" path="res://addons/EzNet/example/textures/blue_pressed.png" id="5_sppne"]
+[ext_resource type="Texture2D" uid="uid://cm4lu8wjr0hdg" path="res://addons/EzNet/example/textures/blue_hovered.png" id="6_mo5f1"]
+[ext_resource type="Texture2D" uid="uid://dcytbhnn2yopt" path="res://addons/EzNet/example/textures/red_normal.png" id="7_ijkee"]
+[ext_resource type="Texture2D" uid="uid://d3es3ep4mmfwc" path="res://addons/EzNet/example/textures/red_pressed.png" id="8_hk40f"]
+[ext_resource type="Texture2D" uid="uid://cwf3lihu1ntwk" path="res://addons/EzNet/example/textures/red_hovered.png" id="9_p7pfv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sppne"]
+transparency = 1
+albedo_color = Color(0, 0, 1, 0.541176)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_waq6e"]
+material = SubResource("StandardMaterial3D_sppne")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ijkee"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.541176)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sppne"]
+material = SubResource("StandardMaterial3D_ijkee")
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_waq6e"]
+vertices = PackedVector3Array(-9.5, 0.02, -0.75, -3, 0.02, -0.75, -3, 0.02, -2.75, -0.75, 0.02, -3, -0.75, 0.02, -9.5, -9.5, 0.02, -9.5, 3, 0.02, -3, 3.25, 0.02, -1.25, 9.5, 0.02, -1.5, 9.5, 0.02, -9.5, -2, 1.02, -2, -2, 1.02, 2.25, 2.25, 1.02, 2, 2, 1.02, -2, 2.75, 0.02, 3.25, 1.25, 0.02, 3.25, 1.5, 0.02, 9.5, 3.25, 0.02, 2.75, 9.5, 0.02, 9.5, -2.75, 0.02, 3.25, -9.5, 0.02, 9.5)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 2), PackedInt32Array(0, 5, 2), PackedInt32Array(2, 5, 4), PackedInt32Array(6, 8, 7), PackedInt32Array(6, 3, 4), PackedInt32Array(8, 6, 9), PackedInt32Array(9, 6, 4), PackedInt32Array(13, 12, 10), PackedInt32Array(10, 12, 11), PackedInt32Array(16, 15, 14), PackedInt32Array(14, 17, 16), PackedInt32Array(16, 17, 18), PackedInt32Array(18, 17, 8), PackedInt32Array(17, 7, 8), PackedInt32Array(19, 15, 16), PackedInt32Array(0, 1, 19), PackedInt32Array(0, 19, 20), PackedInt32Array(20, 19, 16)]
+cell_height = 0.01
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_waq6e"]
+albedo_color = Color(0.478431, 0.498039, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sppne"]
+material = SubResource("StandardMaterial3D_waq6e")
+size = Vector3(20, 1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mo5f1"]
+albedo_color = Color(1, 0.45098, 0.443137, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mo5f1"]
+material = SubResource("StandardMaterial3D_mo5f1")
+size = Vector3(20, 1, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_waq6e"]
+size = Vector3(5, 1, 5)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sppne"]
+friction = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sppne"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mo5f1"]
+size = Vector3(20, 1, 10)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.0122965, -0.516832, 0.855998, 0.00742356, 0.856087, 0.516779, -0.999897, -1.39696e-09, 0.0143636, 13.6211, 6.65698, 0)
+
+[node name="ExampleNetworkManager" type="Node" parent="."]
+script = ExtResource("1_lopfr")
+red_spawn_point = Vector3(0, 1, -8.147)
+blue_spawn_point = Vector3(0, 1, 8.14701)
+networker = ExtResource("2_sppne")
+
+[node name="Menus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ConnectionMenu" type="Control" parent="Menus"]
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+script = ExtResource("2_7vvwc")
+
+[node name="IP Label" type="Label" parent="Menus/ConnectionMenu"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 232.0
+offset_right = 656.0
+offset_bottom = 255.0
+text = "IP:"
+
+[node name="IP LineEdit" type="LineEdit" parent="Menus/ConnectionMenu"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 255.0
+offset_right = 656.0
+offset_bottom = 286.0
+text = "127.0.0.1"
+
+[node name="Port Label" type="Label" parent="Menus/ConnectionMenu"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 320.0
+offset_right = 656.0
+offset_bottom = 343.0
+text = "Port:"
+
+[node name="Port LineEdit" type="LineEdit" parent="Menus/ConnectionMenu"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 343.0
+offset_right = 656.0
+offset_bottom = 374.0
+text = "9999"
+
+[node name="ConnectButton" type="Button" parent="Menus/ConnectionMenu"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 408.0
+offset_right = 656.0
+offset_bottom = 439.0
+text = "Connect"
+
+[node name="HostButton" type="Button" parent="Menus/ConnectionMenu"]
+layout_mode = 0
+offset_top = 616.0
+offset_right = 1152.0
+offset_bottom = 647.0
+text = "Host"
+
+[node name="ColorSelectMenu" type="Control" parent="Menus"]
+visible = false
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+script = ExtResource("3_pw7pi")
+
+[node name="Blue" type="TextureButton" parent="Menus/ColorSelectMenu"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 448.0
+offset_bottom = 512.0
+texture_normal = ExtResource("4_waq6e")
+texture_pressed = ExtResource("5_sppne")
+texture_hover = ExtResource("6_mo5f1")
+stretch_mode = 0
+
+[node name="Red" type="TextureButton" parent="Menus/ColorSelectMenu"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 704.0
+offset_top = 128.0
+offset_right = 1024.0
+offset_bottom = 512.0
+texture_normal = ExtResource("7_ijkee")
+texture_pressed = ExtResource("8_hk40f")
+texture_hover = ExtResource("9_p7pfv")
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Menus/ColorSelectMenu"]
+layout_mode = 0
+offset_top = 608.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "Error Text Goes Here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="blueSpawn" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8.14701)
+mesh = SubResource("CylinderMesh_waq6e")
+skeleton = NodePath("../..")
+
+[node name="redSpawn" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -8.147)
+mesh = SubResource("CylinderMesh_sppne")
+skeleton = NodePath("../..")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="World"]
+navigation_mesh = SubResource("NavigationMesh_waq6e")
+
+[node name="blueGround" type="MeshInstance3D" parent="World/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 5)
+mesh = SubResource("BoxMesh_sppne")
+skeleton = NodePath("../../..")
+
+[node name="redGround" type="MeshInstance3D" parent="World/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -5)
+mesh = SubResource("BoxMesh_mo5f1")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_waq6e")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World"]
+physics_material_override = SubResource("PhysicsMaterial_sppne")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_sppne")
+
+[node name="BlueArea" type="Area3D" parent="World"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/BlueArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 5)
+shape = SubResource("BoxShape3D_mo5f1")
+
+[node name="RedArea" type="Area3D" parent="World"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/RedArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -5)
+shape = SubResource("BoxShape3D_mo5f1")

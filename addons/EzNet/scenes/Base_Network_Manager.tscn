@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq54x8yp6q3ny"]
+
+[ext_resource type="Script" uid="uid://bo6sgoc00ixpn" path="res://addons/eznet/scripts/network/network_manager.gd" id="1_m06tk"]
+[ext_resource type="Resource" uid="uid://cntvsjlt21e6f" path="res://addons/eznet/resources/enet_networker.tres" id="2_w8mw2"]
+
+[node name="Network_Manager" type="Node"]
+script = ExtResource("1_m06tk")
+networker = ExtResource("2_w8mw2")

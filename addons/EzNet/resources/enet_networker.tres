@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cntvsjlt21e6f"]
+
+[ext_resource type="Script" uid="uid://bcn16vu6d1ogw" path="res://addons/eznet/scripts/network/enet_networker.gd" id="1_bmnex"]
+
+[resource]
+script = ExtResource("1_bmnex")
+ip = "127.0.0.1"
+port = 9999

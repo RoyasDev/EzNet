@@ -1,0 +1,23 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="EzNet"
+run/main_scene="uid://bqbtjjg04e8aj"
+config/features=PackedStringArray("4.4", "Forward Plus")
+
+[dotnet]
+
+project/assembly_name="EzNet"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/EzNet/plugin.cfg")
