@@ -26,7 +26,7 @@ Built off of the networking solution we built in our Youtube Multiplayer Series!
   - Batch spawning
   - Extensible Networker base class
 
-[Walking Gif](Images/walking_gif.gif)
+[Walking Gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzh4a3BjY3NpNzltb3plNDJhd3Rxc2p6cTluZzM4bDMzbXk2MDJ5NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SOtnvxhl9AA2XUyHX4/giphy.gif)
 
 ## 📦 Installation
 
@@ -38,7 +38,7 @@ Built off of the networking solution we built in our Youtube Multiplayer Series!
 
 ### Manual Installation
 1. Download the [latest release](https://github.com/RoyasDev/EzNet/releases)
-2. Extract the `addons/eznet` folder
+2. Extract the `addons/EzNet` folder
 3. Copy to your project's `addons` directory
 4. Enable in Project Settings → Plugins
 
