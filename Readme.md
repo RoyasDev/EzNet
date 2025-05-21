@@ -4,7 +4,7 @@ A robust networking solution for Godot 4 that handles object synchronization, ow
 
 Built off of the networking solution we built in our Youtube Multiplayer Series! ![Godot Multiplayer Tutorial Series](https://www.youtube.com/watch?v=YpyS_EbmS7c&list=PLbz43GPOKlIGD6C70AfyXJSB7GrZmvwyC)
 
-<img src="https://github.com/amsam0/discord-icons/blob/main/stable/linux.png?raw=true" alt="discord logo" width="100" height="100" href="https://discord.gg/D4Fb6vkx">
+[![Discord](https://img.icons8.com/?size=100&id=SAZw8WuWnQea&format=png&color=000000)](https://discord.gg/7vnUBmYz)
 
 ## 🔧 Features
 
