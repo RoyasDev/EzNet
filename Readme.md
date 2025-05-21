@@ -184,6 +184,32 @@ Included in /example
 
 1. Team Game - Red vs Blue with spawn zones and sync vars
 
+## 🗺️ Development Roadmap
+
+### Upcoming Features
+
+| Feature                | Status      | Description |
+|------------------------|-------------|-------------|
+| **Targeted Spawns**    | Planned     | Spawn objects only for specific clients (useful for player-specific items) |
+| **Level Management**   | In Progress | Automatic scene synchronization with client-side loading screens |
+| **Interpolators**      | Planned     | Built-in transform interpolation for smoother network movement |
+| **Interest Management**| Planned     | Network rooms and proximity-based RPCs to optimize bandwidth |
+
+### Future Goals
+
+- **More Example Projects**:
+  - Top-down shooter with lag compensation
+  - MMO-style chunk loading demo
+  - Real-time strategy game example
+  - Voice chat integration example
+
+- **Quality of Life**:
+  - More pre-built networkers e.g. Websockets, Steam, Epic
+  - Automated stress testing tools
+  - Godot Editor plugins for setup
+  - Unit testing
+  - Fully documented wiki
+
 ## 📜 License
 
 MIT License - See LICENSE.md for details
