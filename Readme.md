@@ -214,7 +214,8 @@ Included in /example
 
 ## Developers
 
-Patrick Larsen
+Patrick Larsen 
+
 Tait Larsen
 
 ## 📜 License
