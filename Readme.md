@@ -212,6 +212,11 @@ Included in /example
   - Unit testing
   - Fully documented wiki
 
+## Developers
+
+Patrick Larsen
+Tait Larsen
+
 ## 📜 License
 
 MIT License - See LICENSE.md for details
