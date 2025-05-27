@@ -46,6 +46,8 @@ Built off of the networking solution we built in our Youtube Multiplayer Series!
 
 ## 🚀 Quick Start
 
+### Full Quick Start Guide [Move Cube](https://github.com/RoyasDev/EzNet/wiki/Quick-Start-%E2%80%90-Move-Cube)
+
 ### 1. Add your NetworkManager
 
 Autoload:
