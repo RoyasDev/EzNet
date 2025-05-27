@@ -295,6 +295,7 @@ func _on_peer_disconnected(peer_id):
 ## Called on clients when a connection to the server is established
 func _on_connected_to_server():
 	network_id = multiplayer.get_unique_id()
+	connected_player_data.append(_create_player_data(1))
 	connected_player_data.append(_create_player_data(network_id))
 	print("connected to server with id %s" % network_id)
 	network_started = true
