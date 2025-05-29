@@ -1,7 +1,7 @@
 class_name NetworkObject extends Node
 
 #region variables
-## The name of the autoloaded network manager node 
+## The name of the network manager node if its auto loaded. Or the path to the Network Manager without the /root/ part
 @export var network_manager_name = "Network_Manager"
 
 ## Sets the owner of this network object to the server on disconnect
@@ -54,6 +54,11 @@ signal on_network_destroy()
 #region godot functions
 ## @tutorial override this and then call super() at the END of your ready function
 func _ready() -> void:
+	if !is_instance_valid(network_manager):
+		printerr("No network manager found. 
+		Ensure that the name in the inspector is correct or that the NetworkManager exists in the scene autoloaded or otherwise")
+		return
+	
 	var props := get_property_list()
 	
 	for prop in props:
@@ -61,9 +66,6 @@ func _ready() -> void:
 		if prop.name.begins_with("sync_") && (prop.type != 16 && prop.type != 17):
 			network_sync_vars[prop.name] = get(prop.name)
 	
-	if !is_instance_valid(network_manager):
-		printerr("No network manager found. Maybe the name is incorrect or it wasn't auto loaded")
-		return
 	
 	if !network_manager.network_started:
 		network_manager.on_server_started.connect(_on_network_start)
