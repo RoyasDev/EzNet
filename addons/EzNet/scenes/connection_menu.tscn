@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://cypjqvuqdcxed"]
+
+[ext_resource type="Script" uid="uid://lodnbq0nwckl" path="res://addons/EzNet/example/scripts/example_connection_menu.gd" id="1_1tbkw"]
+
+[node name="ConnectionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+script = ExtResource("1_1tbkw")
+
+[node name="IP Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 232.0
+offset_right = 656.0
+offset_bottom = 255.0
+text = "IP:"
+
+[node name="IP LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 255.0
+offset_right = 656.0
+offset_bottom = 286.0
+text = "127.0.0.1"
+
+[node name="Port Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 320.0
+offset_right = 656.0
+offset_bottom = 343.0
+text = "Port:"
+
+[node name="Port LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 343.0
+offset_right = 656.0
+offset_bottom = 374.0
+text = "9999"
+
+[node name="ConnectButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 408.0
+offset_right = 656.0
+offset_bottom = 439.0
+text = "Connect"
+
+[node name="HostButton" type="Button" parent="."]
+layout_mode = 0
+offset_top = 616.0
+offset_right = 1152.0
+offset_bottom = 647.0
+text = "Host"

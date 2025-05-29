@@ -1,9 +1,9 @@
 [gd_scene load_steps=24 format=3 uid="uid://bqbtjjg04e8aj"]
 
 [ext_resource type="Script" uid="uid://bng6hhomt3vvm" path="res://addons/EzNet/example/scripts/example_network_manager.gd" id="1_lopfr"]
-[ext_resource type="Script" uid="uid://lodnbq0nwckl" path="res://addons/EzNet/example/scripts/example_connection_menu.gd" id="2_7vvwc"]
 [ext_resource type="Resource" uid="uid://cntvsjlt21e6f" path="res://addons/EzNet/resources/enet_networker.tres" id="2_sppne"]
 [ext_resource type="Script" uid="uid://bjjvinhxaxu41" path="res://addons/EzNet/example/scripts/example_color_select_menu.gd" id="3_pw7pi"]
+[ext_resource type="PackedScene" uid="uid://cypjqvuqdcxed" path="res://addons/EzNet/scenes/connection_menu.tscn" id="3_sppne"]
 [ext_resource type="Texture2D" uid="uid://cxf2em2d6pyu8" path="res://addons/EzNet/example/textures/blue_normal.png" id="4_waq6e"]
 [ext_resource type="Texture2D" uid="uid://co8kq2csy4o0t" path="res://addons/EzNet/example/textures/blue_pressed.png" id="5_sppne"]
 [ext_resource type="Texture2D" uid="uid://cm4lu8wjr0hdg" path="res://addons/EzNet/example/textures/blue_hovered.png" id="6_mo5f1"]
@@ -73,58 +73,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ConnectionMenu" type="Control" parent="Menus"]
-anchors_preset = 0
-offset_right = 1154.0
-offset_bottom = 648.0
-script = ExtResource("2_7vvwc")
-
-[node name="IP Label" type="Label" parent="Menus/ConnectionMenu"]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 232.0
-offset_right = 656.0
-offset_bottom = 255.0
-text = "IP:"
-
-[node name="IP LineEdit" type="LineEdit" parent="Menus/ConnectionMenu"]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 255.0
-offset_right = 656.0
-offset_bottom = 286.0
-text = "127.0.0.1"
-
-[node name="Port Label" type="Label" parent="Menus/ConnectionMenu"]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 320.0
-offset_right = 656.0
-offset_bottom = 343.0
-text = "Port:"
-
-[node name="Port LineEdit" type="LineEdit" parent="Menus/ConnectionMenu"]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 343.0
-offset_right = 656.0
-offset_bottom = 374.0
-text = "9999"
-
-[node name="ConnectButton" type="Button" parent="Menus/ConnectionMenu"]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 408.0
-offset_right = 656.0
-offset_bottom = 439.0
-text = "Connect"
-
-[node name="HostButton" type="Button" parent="Menus/ConnectionMenu"]
-layout_mode = 0
-offset_top = 616.0
-offset_right = 1152.0
-offset_bottom = 647.0
-text = "Host"
+[node name="ConnectionMenu" parent="Menus" instance=ExtResource("3_sppne")]
 
 [node name="ColorSelectMenu" type="Control" parent="Menus"]
 visible = false
