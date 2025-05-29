@@ -2,12 +2,14 @@
 # example connection menu
 extends Control
 
+@export var network_manager_path : NodePath = "/root/Node3D/ExampleNetworkManager"
+
 @onready var ip_field : LineEdit = get_node("IP LineEdit")
 @onready var port_field : LineEdit = get_node("Port LineEdit")
 @onready var connect_btn : Button = get_node("ConnectButton")
 @onready var host_btn : Button = get_node("HostButton")
-@onready var network_manager : NetworkManager = get_node("/root/Node3D/ExampleNetworkManager")
-@onready var character_select_menu : Control = get_node("/root/Node3D/Menus/ColorSelectMenu")
+@onready var network_manager : NetworkManager = get_node(network_manager_path)
+
 
 func _ready() -> void:
 	network_manager.on_server_started.connect(_on_connected_to_server)
@@ -19,7 +21,6 @@ func _on_connected_to_server():
 	if network_manager.is_server:
 		status_text = "server"
 	
-	character_select_menu.show()
 	hide()
 
 func _host():

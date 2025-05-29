@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bng6hhomt3vvm" path="res://addons/EzNet/example/scripts/example_network_manager.gd" id="1_lopfr"]
 [ext_resource type="Resource" uid="uid://cntvsjlt21e6f" path="res://addons/EzNet/resources/enet_networker.tres" id="2_sppne"]
 [ext_resource type="Script" uid="uid://bjjvinhxaxu41" path="res://addons/EzNet/example/scripts/example_color_select_menu.gd" id="3_pw7pi"]
-[ext_resource type="PackedScene" uid="uid://cypjqvuqdcxed" path="res://addons/EzNet/scenes/connection_menu.tscn" id="3_sppne"]
+[ext_resource type="PackedScene" uid="uid://bbsdy12irftnu" path="res://addons/EzNet/scenes/connection_menu.tscn" id="3_sppne"]
 [ext_resource type="Texture2D" uid="uid://cxf2em2d6pyu8" path="res://addons/EzNet/example/textures/blue_normal.png" id="4_waq6e"]
 [ext_resource type="Texture2D" uid="uid://co8kq2csy4o0t" path="res://addons/EzNet/example/textures/blue_pressed.png" id="5_sppne"]
 [ext_resource type="Texture2D" uid="uid://cm4lu8wjr0hdg" path="res://addons/EzNet/example/textures/blue_hovered.png" id="6_mo5f1"]

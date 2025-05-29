@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cypjqvuqdcxed"]
+[gd_scene load_steps=2 format=3 uid="uid://bbsdy12irftnu"]
 
 [ext_resource type="Script" uid="uid://lodnbq0nwckl" path="res://addons/EzNet/example/scripts/example_connection_menu.gd" id="1_1tbkw"]
 
