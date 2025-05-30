@@ -2,9 +2,9 @@
 
 A robust networking solution for Godot 4 that handles object synchronization, ownership, and RPC management with minimal setup.
 
-Built off of the networking solution we built in our Youtube Multiplayer Series! ![Godot Multiplayer Tutorial Series](https://www.youtube.com/watch?v=YpyS_EbmS7c&list=PLbz43GPOKlIGD6C70AfyXJSB7GrZmvwyC)
+Built off of the networking solution we built in our Youtube Multiplayer Series! [![Godot Multiplayer Tutorial Series](https://img.youtube.com/vi/YpyS_EbmS7c/0.jpg)](https://www.youtube.com/watch?v=YpyS_EbmS7c&list=PLbz43GPOKlIGD6C70AfyXJSB7GrZmvwyC)
 
-[![Discord](https://img.icons8.com/?size=100&id=SAZw8WuWnQea&format=png&color=000000)](https://discord.gg/7vnUBmYz)
+[![Discord](https://img.icons8.com/?size=100&id=SAZw8WuWnQea&format=png&color=000000)](https://discord.gg/qzCRusbma2)
 
 ## 🔧 Features
 
