@@ -423,20 +423,7 @@ func _on_network_started():
 func _request_spawn_object(spawn_args : Dictionary):
 	var requester_id = multiplayer.get_remote_sender_id()
 	
-	if !spawn_args.has(RESOURCE_PATH_KEY):
-		push_warning("No resource path provided")
-		return
-	
-	var resource_path = spawn_args[RESOURCE_PATH_KEY]
 	spawn_args[OWNER_ID_KEY] = requester_id
-	
-	if _verify_spawn_path(resource_path):
-		push_error("Invalid resource path %s" % resource_path)
-		return
-	
-	if resource_path is not String:
-		push_error("either resource_path(%s) is not a String" % resource_path)
-		return
 	
 	if validate_request_spawn_callable:
 		if validate_request_spawn_callable.call(spawn_args):
