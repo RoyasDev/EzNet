@@ -95,9 +95,9 @@ func _create_server():
 	multiplayer.peer_disconnected.connect(_on_peer_disconnected)
 	network_started = true
 	is_server = multiplayer.is_server()
+	network_id = multiplayer.get_unique_id()
 	on_server_started.connect(_on_network_started)
 	on_server_started.emit()
-	network_id = multiplayer.get_unique_id()
 	on_tick.connect(_on_tick)
 	
 	tick_timer = Timer.new()
